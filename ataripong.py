@@ -1,5 +1,7 @@
+# Modules required for the game
 import pygame, sys, time, random, os
 
+# Initializing screen and values
 os.environ['SDL_VIDEO_CENTERED'] = '1'
 pygame.init()
 gameDisplay = pygame.display.set_mode((800, 600))
@@ -23,6 +25,7 @@ player2_score = 0
 clock = pygame.time.Clock()
 myfont = pygame.font.SysFont("monospace", 65)
 
+# Game loop: will execute until pygame.QUIT == True
 while True:
     player2_y = ball_y - 65
     for event in pygame.event.get():
